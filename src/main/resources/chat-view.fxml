@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+    <VBox xmlns="http://javafx.com/javafx/17"
+          xmlns:fx="http://fxml.com/fxml/1"
+          fx:controller="org.example.ChatController"
+          spacing="15.0"
+          alignment="CENTER">
+
+        <padding>
+            <Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/>
+        </padding>
+        <TextArea editable="false" fx:id="chatArea" wrapText="true" VBox.vgrow="ALWAYS">
+
+
+        </TextArea>
+        <HBox spacing="10.0" alignment="CENTER">
+            <TextField promptText="Express your need..." fx:id="inputField" onAction="#handleSend" HBox.hgrow="ALWAYS" >
+            </TextField>
+            <Button text = "Prompt" onAction="#handleSend">
+            </Button>
+        </HBox>
+
+
+
+    </VBox>
